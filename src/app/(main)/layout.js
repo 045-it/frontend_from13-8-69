@@ -1,6 +1,6 @@
 import { Prompt } from "next/font/google";
 import "../globals.css";
-import Navbar from "@/components/Navigation"
+import Navbar from "@/components/Navigation";
 
 const prompt = Prompt({
   subsets: ["thai", "latin"],
@@ -9,8 +9,8 @@ const prompt = Prompt({
 });
 
 export const metadata = {
-  title: "บ้านร่มเย็น",
-  description: "หอพักนักศึกษาเชียงใหม่",
+  title: "Aura Collection",
+  description: "กระเป๋าดีไซน์เรียบหรูสำหรับทุกไลฟ์สไตล์",
 };
 
 export default function RootLayout({ children }) {
@@ -19,10 +19,10 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${prompt.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col ">
+      <body className="min-h-full flex flex-col">
         <Navbar />
         {children}
-        </body>
+      </body>
     </html>
   );
 }

@@ -1,98 +1,126 @@
 import Image from 'next/image';
 
 export default function Cardsection() {
+  const products = [
+    {
+      name: 'กระเป๋าสะพาย Mini Classic',
+      description: 'กระเป๋าสะพายดีไซน์เรียบหรู ขนาดกะทัดรัด แมตช์ได้ทุกลุค',
+      price: '฿1,290',
+      image:
+        'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800&q=80',
+    },
+    {
+      name: 'กระเป๋าถือ Elegant Lady',
+      description: 'กระเป๋าถือทรงสวย ดีไซน์เรียบหรู เหมาะสำหรับวันทำงานและวันพิเศษ',
+      price: '฿1,890',
+      image:
+        'https://images.unsplash.com/photo-1594223274512-ad4803739b7c?w=800&q=80',
+    },
+    {
+      name: 'กระเป๋าสะพาย Everyday Bag',
+      description: 'กระเป๋าสำหรับใช้ในชีวิตประจำวัน จุของได้เยอะ น้ำหนักเบา',
+      price: '฿1,590',
+      image:
+        'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=800&q=80',
+    },
+  ];
+
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-16 bg-[#faf7f4]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-       
+
         {/* หัวข้อ Section */}
-        <div className="mb-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900">สินค้าแนะนำ</h2>
-          <p className="mt-2 text-gray-600">เลือกชมสินค้าที่น่าสนใจของเราในเดือนนี้</p>
+        <div className="mb-10 text-center">
+          <p className="text-sm tracking-[0.3em] uppercase text-[#a67c68] font-medium">
+            Aura Collection
+          </p>
+
+          <h2 className="mt-2 text-3xl md:text-4xl font-bold text-[#3d302b]">
+            กระเป๋าแนะนำ
+          </h2>
+
+          <p className="mt-3 text-[#8a7770]">
+            เติมความสวยให้ทุกลุคด้วยกระเป๋าดีไซน์ที่คัดสรรมาเพื่อคุณ
+          </p>
         </div>
 
-        {/* ตะแกรง Grid แบบ 3 คอลัมน์ */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-         
-          {/* ==================== การ์ดใบที่ 1 ==================== */}
-          <div className="border rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 bg-white">
-            <div className="relative w-full h-48 bg-gray-100">
-              <Image
-                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80"
-                alt="หูฟังไร้สาย Noise Cancelling"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-4">
-              <h3 className="text-lg font-semibold text-gray-800 line-clamp-1">
-                หูฟังไร้สาย Noise Cancelling
-              </h3>
-              <p className="text-sm text-gray-500 mt-1 line-clamp-2">
-                ตัดเสียงรบกวนได้ดีเยี่ยม แบตเตอรี่ใช้งานได้ยาวนาน 30 ชั่วโมง
-              </p>
-              <div className="mt-4 flex items-center justify-between">
-                <span className="text-xl font-bold text-blue-600">฿4,990</span>
-                <button className="px-4 py-2 bg-black text-white text-sm font-medium rounded-md hover:bg-gray-800 transition-colors">
-                  เพิ่มลงตะกร้า
-                </button>
-              </div>
-            </div>
-          </div>
+        {/* Product Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-7">
 
-          {/* ==================== การ์ดใบที่ 2 ==================== */}
-          <div className="border rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 bg-white">
-            <div className="relative w-full h-48 bg-gray-100">
-              <Image
-                src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500&q=80"
-                alt="กล้อง Mirrorless 4K"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-4">
-              <h3 className="text-lg font-semibold text-gray-800 line-clamp-1">
-                กล้อง Mirrorless 4K
-              </h3>
-              <p className="text-sm text-gray-500 mt-1 line-clamp-2">
-                กล้องดิจิตอลความละเอียดสูง พร้อมเลนส์คิท 15-45mm
-              </p>
-              <div className="mt-4 flex items-center justify-between">
-                <span className="text-xl font-bold text-blue-600">฿25,900</span>
-                <button className="px-4 py-2 bg-black text-white text-sm font-medium rounded-md hover:bg-gray-800 transition-colors">
-                  เพิ่มลงตะกร้า
-                </button>
-              </div>
-            </div>
-          </div>
+          {products.map((product, index) => (
+            <div
+              key={index}
+              className="group bg-white rounded-2xl overflow-hidden border border-[#eee3dc] shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
 
-          {/* ==================== การ์ดใบที่ 3 ==================== */}
-          <div className="border rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 bg-white">
-            <div className="relative w-full h-48 bg-gray-100">
-              <Image
-                src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80"
-                alt="นาฬิกาสมาร์ทวอทช์"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-4">
-              <h3 className="text-lg font-semibold text-gray-800 line-clamp-1">
-                นาฬิกาสมาร์ทวอทช์
-              </h3>
-              <p className="text-sm text-gray-500 mt-1 line-clamp-2">
-                ติดตามการออกกำลังกาย วัดอัตราการเต้นของหัวใจ กันน้ำได้
-              </p>
-              <div className="mt-4 flex items-center justify-between">
-                <span className="text-xl font-bold text-blue-600">฿3,200</span>
-                <button className="px-4 py-2 bg-black text-white text-sm font-medium rounded-md hover:bg-gray-800 transition-colors">
-                  เพิ่มลงตะกร้า
+              {/* รูปสินค้า */}
+              <div className="relative w-full h-72 bg-[#f3eee9] overflow-hidden">
+
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+
+                {/* ป้ายสินค้า */}
+                {index === 0 && (
+                  <span className="absolute top-4 left-4 bg-[#8b5e4b] text-white text-xs px-3 py-1.5 rounded-full">
+                    Best Seller
+                  </span>
+                )}
+
+                {index === 1 && (
+                  <span className="absolute top-4 left-4 bg-[#c89f91] text-white text-xs px-3 py-1.5 rounded-full">
+                    New
+                  </span>
+                )}
+
+                {/* ปุ่มหัวใจ */}
+                <button
+                  className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm text-[#765548] hover:bg-[#8b5e4b] hover:text-white transition-colors"
+                  aria-label="เพิ่มรายการโปรด"
+                >
+                  ♡
                 </button>
               </div>
+
+              {/* รายละเอียดสินค้า */}
+              <div className="p-5">
+
+                <h3 className="text-lg font-semibold text-[#3d302b] group-hover:text-[#8b5e4b] transition-colors">
+                  {product.name}
+                </h3>
+
+                <p className="text-sm text-[#8a7770] mt-2 leading-6 line-clamp-2">
+                  {product.description}
+                </p>
+
+                {/* ราคา + ปุ่ม */}
+                <div className="mt-5 flex items-center justify-between">
+
+                  <span className="text-xl font-bold text-[#8b5e4b]">
+                    {product.price}
+                  </span>
+
+                  <button className="px-4 py-2.5 bg-[#3d302b] text-white text-sm font-medium rounded-full hover:bg-[#8b5e4b] transition-colors">
+                    เพิ่มลงตะกร้า
+                  </button>
+
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
 
         </div>
+
+        {/* ปุ่มดูสินค้าทั้งหมด */}
+        <div className="mt-10 text-center">
+          <button className="px-7 py-3 border border-[#8b5e4b] text-[#8b5e4b] rounded-full text-sm font-medium hover:bg-[#8b5e4b] hover:text-white transition-colors">
+            ดูสินค้าทั้งหมด
+          </button>
+        </div>
+
       </div>
     </section>
   );

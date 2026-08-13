@@ -1,43 +1,77 @@
 export default function Footersection() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-12">
+    <footer className="bg-[#3d302b] text-[#e8ddd7] py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-       
-        {/* แบ่งพื้นที่เป็น 3 คอลัมน์สำหรับจอใหญ่ และ 1 คอลัมน์สำหรับมือถือ */}
+
+        {/* Footer 3 คอลัมน์ */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-         
-          {/* ==================== ส่วนที่ 1: ข้อมูลร้านค้า ==================== */}
+
+          {/* ==================== ส่วนที่ 1: ข้อมูลร้าน ==================== */}
           <div>
-            <h2 className="text-white text-xl font-bold mb-4">NextShop</h2>
-            <p className="text-sm leading-relaxed mb-4">
-              แหล่งรวมสินค้าไอทีและแก็ดเจ็ตที่ทันสมัยที่สุด
-              คัดสรรสินค้าคุณภาพเพื่อตอบโจทย์ทุกไลฟ์สไตล์ของคุณ
-              พร้อมบริการจัดส่งทั่วประเทศ
+            <h2 className="text-[#f3d8ce] text-2xl font-bold mb-4">
+              Aura
+            </h2>
+
+            <p className="text-sm leading-relaxed text-[#cdbdb5] mb-4">
+              กระเป๋าดีไซน์เรียบหรูสำหรับทุกไลฟ์สไตล์
+              คัดสรรกระเป๋าคุณภาพดี ดีไซน์สวย
+              พร้อมเติมความมั่นใจให้ทุกลุคของคุณ
+            </p>
+
+            <p className="text-xs text-[#a9958d]">
+              Elegant • Simple • Everyday
             </p>
           </div>
 
-          {/* ==================== ส่วนที่ 2: เมนูลัด (Quick Links) ==================== */}
+          {/* ==================== ส่วนที่ 2: เมนูลัด ==================== */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4">เมนูลัด</h3>
-            <ul className="space-y-2 text-sm">
+            <h3 className="text-white text-lg font-semibold mb-4">
+              เมนูลัด
+            </h3>
+
+            <ul className="space-y-3 text-sm">
               <li>
-                <a href="#" className="hover:text-white transition-colors duration-200">
+                <a
+                  href="#"
+                  className="text-[#cdbdb5] hover:text-[#f3d8ce] transition-colors duration-200"
+                >
                   หน้าแรก
                 </a>
               </li>
+
               <li>
-                <a href="#" className="hover:text-white transition-colors duration-200">
+                <a
+                  href="#"
+                  className="text-[#cdbdb5] hover:text-[#f3d8ce] transition-colors duration-200"
+                >
                   สินค้าทั้งหมด
                 </a>
               </li>
+
               <li>
-                <a href="#" className="hover:text-white transition-colors duration-200">
+                <a
+                  href="#"
+                  className="text-[#cdbdb5] hover:text-[#f3d8ce] transition-colors duration-200"
+                >
+                  กระเป๋าแนะนำ
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  className="text-[#cdbdb5] hover:text-[#f3d8ce] transition-colors duration-200"
+                >
                   โปรโมชั่น
                 </a>
               </li>
+
               <li>
-                <a href="#" className="hover:text-white transition-colors duration-200">
-                  บทความ/รีวิว
+                <a
+                  href="#"
+                  className="text-[#cdbdb5] hover:text-[#f3d8ce] transition-colors duration-200"
+                >
+                  ติดต่อเรา
                 </a>
               </li>
             </ul>
@@ -45,35 +79,65 @@ export default function Footersection() {
 
           {/* ==================== ส่วนที่ 3: ติดต่อเรา ==================== */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4">ติดต่อเรา</h3>
-            <ul className="space-y-2 text-sm">
-              <li>📍 9 ถ.เวียงแก้ว ต.ศรีภูมิ อ.เมืองเชียงใหม่ จ.เชียงใหม่ 50200</li>
-              <li>📞 02-123-4567 (จ.-ศ. 09:00 - 18:00)</li>
-              <li>✉️ support@nextshop.com</li>
+            <h3 className="text-white text-lg font-semibold mb-4">
+              ติดต่อเรา
+            </h3>
+
+            <ul className="space-y-3 text-sm text-[#cdbdb5]">
+              <li>
+                📍 เชียงใหม่ ประเทศไทย
+              </li>
+
+              <li>
+                📞 02-123-4567
+              </li>
+
+              <li>
+                ✉️ support@aura.com
+              </li>
+
+              <li>
+                🕐 จันทร์ - ศุกร์ 09:00 - 18:00 น.
+              </li>
             </ul>
-           
-            {/* ปุ่ม Social Media แบบจำลอง (ใส่ลิงก์จริงที่ href) */}
-            <div className="mt-4 flex space-x-4">
-              <a href="#" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition-colors">
-                <span className="sr-only">Facebook</span>
-                <span className="text-white font-bold text-xs">FB</span>
+
+            {/* Social Media */}
+            <div className="mt-5 flex gap-3">
+
+              <a
+                href="#"
+                aria-label="Facebook"
+                className="w-9 h-9 rounded-full bg-[#51413a] flex items-center justify-center text-white text-xs font-bold hover:bg-[#8b5e4b] transition-colors"
+              >
+                FB
               </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-400 transition-colors">
-                <span className="sr-only">Twitter</span>
-                <span className="text-white font-bold text-xs">TW</span>
+
+              <a
+                href="#"
+                aria-label="Twitter"
+                className="w-9 h-9 rounded-full bg-[#51413a] flex items-center justify-center text-white text-xs font-bold hover:bg-[#8b5e4b] transition-colors"
+              >
+                TW
               </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition-colors">
-                <span className="sr-only">Instagram</span>
-                <span className="text-white font-bold text-xs">IG</span>
+
+              <a
+                href="#"
+                aria-label="Instagram"
+                className="w-9 h-9 rounded-full bg-[#51413a] flex items-center justify-center text-white text-xs font-bold hover:bg-[#c89f91] transition-colors"
+              >
+                IG
               </a>
+
             </div>
           </div>
 
         </div>
 
-        {/* ==================== ส่วนล่างสุด: Copyright ==================== */}
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-500">
-          <p>© {new Date().getFullYear()} NextShop. All rights reserved.</p>
+        {/* ==================== Copyright ==================== */}
+        <div className="border-t border-[#51413a] mt-10 pt-6 text-center">
+          <p className="text-sm text-[#a9958d]">
+            © {new Date().getFullYear()} Aura Collection. All rights reserved.
+          </p>
         </div>
 
       </div>
